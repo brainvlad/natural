@@ -1,0 +1,145 @@
+.contact {
+  padding-top: 76px;
+  padding-bottom: 76px;
+  &__title {
+    font-family: "Cormorant";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    /* identical to box height */
+
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  &__main {
+    display: flex;
+    gap: 32px;
+    height: 280px;
+  }
+
+  &__map {
+    flex: 1;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  &__info {
+    flex: 1;
+    flex-shrink: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+
+  &__info-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__item {
+  }
+
+  &__item-title {
+    font-family: "Cormorant";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: #29463a;
+    margin-bottom: 8px;
+  }
+
+  &__item-desc {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 19px;
+
+    color: #000000;
+  }
+
+  &__item-bold {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #29463a;
+  }
+
+  &__item-social {
+  }
+
+  &__brand {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__brand-item {
+    flex: 1;
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+@include mobile-lg() {
+  .contact {
+    &__main {
+      flex-direction: column-reverse;
+      height: max-content;
+    }
+
+    &__info-col {
+      gap: 20px;
+    }
+
+    &__map {
+      & iframe {
+        height: 274px;
+      }
+    }
+
+    &__brand {
+      flex-direction: column;
+    }
+  }
+}
+
+@include mobile-sm() {
+  .contact {
+    padding-top: 26px;
+    padding-bottom: 26px;
+
+    &__title {
+      font-family: "Cormorant";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 29px;
+      /* identical to box height */
+
+      text-align: center;
+
+      color: #000000;
+    }
+
+    &__info {
+      flex-direction: column;
+      text-align: center;
+    }
+    &__info-col {
+      gap: 40px;
+    }
+  }
+}

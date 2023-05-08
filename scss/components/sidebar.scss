@@ -1,0 +1,62 @@
+.sidebar {
+  flex: 1;
+  flex-basis: 260px;
+  flex-grow: 0;
+  // flex-shrink: 0;
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: "Cormorant";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  &__item {
+    display: block;
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    color: #272727;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #576350;
+    }
+
+    &-active {
+      background-color: #f0f0f0;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      color: #576350;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: 100%;
+        width: 50vh;
+        max-width: 50vh;
+        background-color: #f0f0f0;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,117 @@
+.header {
+  background-color: $white;
+  position: sticky;
+  z-index: 100;
+  top: 0;
+
+  &-bg {
+    background-image: url(./../../assets/img/header-bg.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__top {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__col {
+    &:last-child {
+      flex-basis: 340px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__tel {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $green-800;
+  }
+
+  &__email {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+
+    color: #29463a;
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+    & > input {
+      background-color: $peach;
+      outline: none;
+      border: none;
+      padding-left: 38px;
+      font-size: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 5px;
+      color: $green-600;
+      cursor: pointer;
+      max-width: 0;
+      transition: max-width 0.3s ease-in-out;
+
+      &:focus {
+        cursor: initial;
+        max-width: 240px;
+      }
+    }
+
+    & > i {
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      color: $green-600;
+      pointer-events: none;
+    }
+  }
+
+  &__nav {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+  }
+
+  &__nav-item {
+    font-family: "Cormorant";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+
+    color: $green-800;
+    transition: color 0.15s;
+
+    &:hover {
+      color: $green-600;
+    }
+  }
+}
+
+@include mobile-lg() {
+  .header {
+    display: none;
+  }
+}

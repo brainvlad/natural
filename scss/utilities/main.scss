@@ -1,0 +1,82 @@
+.container {
+  max-width: 1159px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+}
+.wrapper {
+  min-height: 100vh;
+}
+.devider {
+  height: 1px;
+  width: 100%;
+
+  &-gray {
+    background-color: rgba(142, 142, 142, 0.6);
+  }
+  &-white {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+  &-green {
+    background-color: rgba(204, 230, 191, 0.8);
+  }
+}
+
+.logo {
+  font-family: "Bonheur Royale";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 74px;
+
+  color: $green-600;
+}
+
+.btn {
+  display: block;
+  width: fit-content;
+  min-width: 174px;
+  padding: 14px 12px;
+  font-family: "Geometria";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $white;
+  background-color: $green-800;
+  border-radius: 5px;
+  transition: top 0.15s;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background-color: $green-600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  &:hover::after {
+    left: 0;
+    width: 100%;
+  }
+}
+
+.block-title {
+  font-family: "Cormorant";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 44px;
+  padding: 40px 0;
+  color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+}

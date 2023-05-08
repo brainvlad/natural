@@ -1,0 +1,36 @@
+.breadcrumbs {
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 19px;
+    color: rgba(100, 100, 100, 0.7);
+  }
+
+  &__item {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__item-active {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 19px;
+    color: #272727;
+  }
+}
+
+@include mobile-lg() {
+  .breadcrumbs {
+    display: none;
+  }
+}

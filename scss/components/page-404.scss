@@ -1,0 +1,88 @@
+.page-404 {
+  padding-top: 72px;
+  padding-bottom: 72px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title-num {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 128px;
+    line-height: 124.7%;
+    color: #efdbc4;
+  }
+
+  &__title-null {
+    animation-name: bounce-null;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+
+  &__subtitle {
+    font-family: "Cormorant";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    /* identical to box height */
+
+    color: #29463a;
+    text-align: center;
+  }
+
+  &__desc {
+    font-family: "Cormorant";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+
+    color: #000000;
+    text-align: center;
+    max-width: 600px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    & > .btn {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  @keyframes bounce-null {
+    0% {
+      transform: translateY(0px);
+    }
+    10% {
+      transform: translateY(-30px);
+    }
+    20% {
+      transform: translateY(0px);
+    }
+    26% {
+      transform: translateY(-15px);
+    }
+    32% {
+      transform: translateY(0px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+}

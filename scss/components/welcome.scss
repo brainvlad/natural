@@ -1,0 +1,48 @@
+.welcome {
+  background-color: $peach;
+  background-image: url(./../../assets/img/welcome-bg.png);
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  &__container {
+    min-height: 500px;
+    height: calc(100vh - 126px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 41px;
+    padding-bottom: 100px;
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__p {
+    max-width: 527px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  &__btn {
+  }
+}
+
+@include mobile-lg() {
+  .welcome {
+    &__container {
+      min-height: unset;
+      height: unset;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      align-items: center;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+.dropdown {
+  display: none;
+
+  &__toggle {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+    padding-right: 20px;
+
+    & > i {
+      transition: all 0.15s;
+      opacity: 0.5;
+    }
+
+    &.active {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+
+      & > i {
+        transform: rotate(90deg);
+        opacity: 0.75;
+      }
+    }
+  }
+}

@@ -1,0 +1,181 @@
+.footer {
+  &__lg-visible {
+    display: none;
+  }
+  &__poly {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    /* identical to box height */
+    text-align: center;
+    color: #29463a;
+  }
+
+  &__top {
+    background-color: $peach;
+
+    &-container {
+      padding-top: 10px;
+    }
+  }
+
+  &__container {
+    padding-top: 38px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  &__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__tel {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    color: $green-800;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__email {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: $green-800;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__copy {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: $green-800;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  &__nav-title {
+    font-family: "Cormorant";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $green-800;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  &__nav-item {
+    font-family: "Geometria";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 19px;
+    color: $green-800;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__nav-container {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__social-item {
+    font-size: 32px;
+    color: $green-800;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $green-600;
+    }
+  }
+}
+
+@include mobile-lg() {
+  .footer {
+    &__copy {
+      display: none;
+    }
+
+    &__lg {
+      display: none;
+    }
+
+    &__container {
+      justify-content: space-around;
+    }
+
+    &__top-container {
+      display: flex;
+      justify-content: center;
+
+      & .logo {
+        font-size: 48px;
+      }
+    }
+  }
+}
+
+@include mobile-md() {
+  .footer {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 20px;
+      padding-top: 18px;
+      padding-bottom: 20px;
+    }
+
+    &__lg-visible {
+      display: block;
+      margin-bottom: 16px;
+    }
+
+    &__social {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+  }
+}
