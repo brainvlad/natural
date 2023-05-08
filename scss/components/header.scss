@@ -113,5 +113,12 @@
 @include mobile-lg() {
   .header {
     display: none;
+    &__search {
+      & > input {
+        &:focus {
+          max-width: 180px;
+        }
+      }
+    }
   }
 }
